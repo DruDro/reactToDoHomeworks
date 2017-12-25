@@ -6,14 +6,14 @@ export class ButtonToggleText extends React.Component {
     this.toggleText = props.toggleText;
     this.state = {
       clName: "",
-      text:"Show"
+      text: "Show"
     }
   }
   onClick = () => {
     if (this.state.clName == "") {
-        this.setState({clName: "active", text:"Hide"});
+        this.setState({clName: "active", text: "Hide"});
     } else {
-      this.setState({clName: "", text:"Show"});
+      this.setState({clName: "", text: "Show"});
     }
   }
   render() {

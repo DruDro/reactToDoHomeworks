@@ -2,7 +2,7 @@
 export class Timer extends React.Component {
     constructor() {
         super();
-        this.state = { date: '', time: ''};
+        this.state = { date: '', time: '' };
     }
     componentDidMount() {
         this.timerId = setInterval(() => this.getNow(), 1000);

@@ -11,7 +11,7 @@ export const Persons = ({users, clickHandler, userName, userPosts}) => (
     </div>
     <section className="user-posts">
       <header>
-        <h3>{ `${userName ? `${userName}` : 'User'}'s Posts`}</h3>
+        <h3>{ `${userName || 'User'}'s Posts`}</h3>
       </header>
       <main>{userPosts.map(post => <article key={post.id}>{post.body}<hr color="#eee" /></article>)}</main>
     </section>

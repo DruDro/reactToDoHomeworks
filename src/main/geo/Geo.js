@@ -2,7 +2,9 @@ export class Geo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clName: ""
+      clName: "",
+      lat: "",
+      long: ""
     };
   }
 

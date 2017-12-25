@@ -1,4 +1,4 @@
-import { Mount } from './Mount';
+import { Mount } from './mount';
 
 export class Lifecycle extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ export class Lifecycle extends React.Component {
         <button onClick={() => this.setState({ counter: counter + 1 })}>Inc</button>
         <span className="count-text">{counter}</span>
         <br /><br />
-        <button onClick={() => this.setState({ show: !show, counter:0 })}>
+        <button onClick={() => this.setState({ show: !show, counter: 0 })}>
           {show ? 'Destroy' : 'Create'}
         </button>
 

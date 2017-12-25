@@ -2,7 +2,6 @@ import './article.scss';
 import {Persons} from '../Persons';
 import {Numbers} from '../../numbers';
 import {Tabs, TabContent, Tab, Tablink, TabNav} from '../../tabs';
-import {TaskList, Tasks, Day, Daylink, TaskNav} from '../../taskList';
 import {Form} from '../../form';
 import {ButtonToggleText} from '../button';
 import {Geo} from '../geo';
@@ -26,7 +25,6 @@ export class Article extends React.Component {
       .then(response => response.json())
       .then((users) => {
         this.setState({users, preloader: false});
-        console.table(users);
       });
   }
 
@@ -97,121 +95,6 @@ export class Article extends React.Component {
             </TabContent>
           </Tab>
         </Tabs>
-        <h2>Tasks</h2>
-        <TaskList selectedIndex={(new Date()).getDay()}>
-          <Day>
-            <Daylink title={'Mon'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Tue'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Wed'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Tue'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Fri'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Sat'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-          <Day>
-            <Daylink title={'Sun'}/>
-            <Tasks>
-              <ol>
-                <li>
-                  <a href="#" className="done">task 1</a>
-                </li>
-                <li>
-                  <a href="#" className="open">task 2</a>
-                </li>
-                <li>
-                  <a href="#" className="done">task 3</a>
-                </li>
-              </ol>
-            </Tasks>
-          </Day>
-        </TaskList>
         <h2>Form</h2>
         <Form />
       </article>

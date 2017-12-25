@@ -17,16 +17,10 @@ const time = () => {
 };
 
 export const Greeting = (props) => {
-  let name = props.name
-    ? props.name
-    : localStorage.getItem("promptName")
-      ? localStorage.getItem("promptName")
-      : '';
+  let name = props.name || localStorage.getItem("promptName") || '';
   if (!name) {
     localStorage.setItem("promptName", prompt("What is your name?"));
-    name = localStorage.getItem("promptName")
-      ? localStorage.getItem("promptName")
-      : '';
+    name = localStorage.getItem("promptName") || '';
   }
   return (
     <div className="greeting">
